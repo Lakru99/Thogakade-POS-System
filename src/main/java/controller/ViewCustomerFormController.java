@@ -5,14 +5,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
 
+import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class ViewCustomerFormController {
+public class ViewCustomerFormController implements Initializable {
 
     @FXML
     private TableView<Customer> customerTbl;
@@ -39,15 +44,18 @@ public class ViewCustomerFormController {
 
 
     }
-
-    @FXML
-    void btnReloadOnAction(ActionEvent event) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colNumber.setCellValueFactory(new PropertyValueFactory<>("number"));
         colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
 
+        loadTable();
+    }
+
+    private void loadTable(){
         List<Customer> customerList = DBConnection.getInstance().getConnection();
         ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
 
@@ -57,7 +65,11 @@ public class ViewCustomerFormController {
 
         customerTbl.setItems(customerObservableList);
 
-        System.out.println("hello");
     }
+    @FXML
+    void btnReloadOnAction(ActionEvent event) {
+        loadTable();
+    }
+
 
 }
