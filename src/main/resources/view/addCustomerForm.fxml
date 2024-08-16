@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="439.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="388.0" layoutX="10.0" layoutY="-12.0" stroke="TRANSPARENT" strokeType="INSIDE" width="555.0" />
+      <ImageView fitHeight="377.0" fitWidth="567.0" layoutX="1.0" layoutY="81.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../assests/back.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27ae60" height="81.0" stroke="TRANSPARENT" strokeType="INSIDE" width="567.0" />
+      <Label layoutX="147.0" layoutY="24.0" text="Add Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f7f770" height="296.0" layoutX="112.0" layoutY="96.0" stroke="TRANSPARENT" strokeType="INSIDE" width="351.0" />
+      <JFXTextField fx:id="txtId" layoutX="156.0" layoutY="112.0" prefHeight="25.0" prefWidth="247.0" promptText="Id" />
+      <JFXTextField fx:id="txtName" layoutX="156.0" layoutY="211.0" prefHeight="25.0" prefWidth="247.0" promptText="Name" />
+      <JFXTextField fx:id="txtAddress" layoutX="156.0" layoutY="259.0" prefHeight="25.0" prefWidth="247.0" promptText="Address" />
+      <JFXButton layoutX="161.0" layoutY="415.0" onAction="#btnAddAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #27ae60;" text="Add Customer" textFill="WHITE" />
+      <JFXComboBox fx:id="cmbTitle" layoutX="156.0" layoutY="163.0" prefHeight="25.0" prefWidth="247.0" promptText="Title" />
+      <JFXTextField fx:id="txtContact" layoutX="156.0" layoutY="309.0" prefHeight="25.0" prefWidth="247.0" promptText="Contact Number" />
+      <JFXButton layoutX="304.0" layoutY="415.0" onAction="#btnClearAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #e74c3c;" text="Clear" textFill="WHITE" />
+      <JFXButton layoutX="388.0" layoutY="415.0" onAction="#btnExitAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #2c3e50;" text="Exit" textFill="WHITE" />
+      <DatePicker fx:id="dob" layoutX="154.0" layoutY="350.0" prefHeight="25.0" prefWidth="247.0" />
+   </children>
+</AnchorPane>

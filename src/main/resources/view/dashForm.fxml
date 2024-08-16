@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
+   <children>
+      <Label layoutX="361.0" layoutY="178.0" text="POS System" textFill="#1abc9c">
+         <font>
+            <Font name="Calibri Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="159.0" fitWidth="159.0" layoutX="365.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="303.0" opacity="0.66" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/main.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="300.0" layoutY="234.0" onAction="#btnAddCustomerAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2ecc71;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="300.0" layoutY="292.0" onAction="#btnViewCustomerAction" style="-fx-background-color: #2c3e50;" text="View Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="382.0" layoutY="348.0" onAction="#btnUpdateCustomerAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #ffa502;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="443.0" layoutY="234.0" onAction="#btnDeleteCustomerAction" style="-fx-background-color: #e74c3c;" text="Delete Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="443.0" layoutY="292.0" onAction="#btnSearchCustomerAction" style="-fx-background-color: #74b9ff;" text="Search Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
