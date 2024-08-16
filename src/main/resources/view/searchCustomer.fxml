@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="407.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchCustomerFormController">
+   <children>
+      <ImageView fitHeight="377.0" fitWidth="572.0" layoutY="30.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/back.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27ae60" height="81.0" stroke="TRANSPARENT" strokeType="INSIDE" width="565.0" />
+      <Label layoutX="156.0" layoutY="17.0" text="Search Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f7f770" height="276.0" layoutX="64.0" layoutY="95.0" stroke="TRANSPARENT" strokeType="INSIDE" width="441.0" />
+      <JFXTextField focusColor="#363636" layoutX="125.0" layoutY="110.0" prefHeight="25.0" prefWidth="254.0" promptText="Search Name or Phone Number" unFocusColor="#6b6262" />
+      <JFXButton layoutX="398.0" layoutY="108.0" style="-fx-background-color: #27ae60;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

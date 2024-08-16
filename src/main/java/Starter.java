@@ -11,6 +11,7 @@ public class Starter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/dashForm.fxml"))));
+        stage.setTitle("ThogaKade Dashboard");
         stage.show();
     }
 }
