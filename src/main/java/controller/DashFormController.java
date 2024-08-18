@@ -29,7 +29,13 @@ public class DashFormController {
 
     @FXML
     void btnSearchCustomerAction(ActionEvent event) {
-
+        Stage stage =new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/searchCustomer.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
