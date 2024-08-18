@@ -1,5 +1,6 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -10,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
+import javafx.stage.Stage;
 import model.Customer;
 
 import java.net.URL;
@@ -21,6 +23,9 @@ public class AddCustomerFormController implements Initializable {
 
     @FXML
     private JFXTextField txtId;
+
+    @FXML
+    private JFXButton btnExit;
 
     @FXML
     private JFXTextField txtName;
@@ -77,7 +82,8 @@ public class AddCustomerFormController implements Initializable {
 
     @FXML
     void btnExitAction(ActionEvent event) {
-
+        Stage stage = (Stage) btnExit.getScene().getWindow();
+        stage.close();
     }
 
 

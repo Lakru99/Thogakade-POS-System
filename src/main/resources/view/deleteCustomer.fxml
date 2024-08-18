@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="417.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteCustomerFormController">
+   <children>
+      <ImageView fitHeight="377.0" fitWidth="565.0" layoutX="1.0" layoutY="40.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/back.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27ae60" height="92.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="566.0" />
+      <Label layoutX="158.0" layoutY="22.0" text="Delete Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f7f770" height="237.0" layoutX="72.0" layoutY="123.0" stroke="TRANSPARENT" strokeType="INSIDE" width="441.0" />
+      <JFXTextField fx:id="searchField" focusColor="#363636" layoutX="133.0" layoutY="138.0" prefHeight="25.0" prefWidth="254.0" promptText="Search Phone Number" unFocusColor="#6b6262" />
+
+      <Label fx:id="idLbl" layoutX="133.0" layoutY="195.0" prefHeight="17.0" prefWidth="220.0" text="ID" />
+      <Label fx:id="nameLbl" layoutX="133.0" layoutY="223.0" prefHeight="17.0" prefWidth="220.0" text="Name" />
+      <Label fx:id="addressLbl" layoutX="133.0" layoutY="253.0" prefHeight="17.0" prefWidth="220.0" text="Address" />
+      <Label fx:id="numberLbl" layoutX="133.0" layoutY="278.0" prefHeight="17.0" prefWidth="220.0" text="Phone Number" />
+      <Label fx:id="dobLbl" layoutX="133.0" layoutY="309.0" prefHeight="17.0" prefWidth="220.0" text="Date of Birth" />
+      <JFXButton layoutX="351.0" layoutY="373.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #e67e22;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" layoutX="440.0" layoutY="373.0" onAction="#btnExitOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #e74c3c;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="260.0" layoutY="373.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="406.0" layoutY="136.0" onAction="#btnSearchOnAction" style="-fx-background-color: #27ae60;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

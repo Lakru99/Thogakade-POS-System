@@ -32,7 +32,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></JFXButton>
-      <JFXButton layoutX="382.0" layoutY="348.0" onAction="#btnUpdateCustomerAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #ffa502;" text="Update" textFill="WHITE">
+      <JFXButton layoutX="300.0" layoutY="346.0" onAction="#btnUpdateCustomerAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffa502;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></JFXButton>
@@ -42,6 +42,11 @@
          </font>
       </JFXButton>
       <JFXButton layoutX="443.0" layoutY="292.0" onAction="#btnSearchCustomerAction" style="-fx-background-color: #74b9ff;" text="Search Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" layoutX="443.0" layoutY="346.0" onAction="#btnExitCustomerAction" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #95a5a6;" text="Exit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

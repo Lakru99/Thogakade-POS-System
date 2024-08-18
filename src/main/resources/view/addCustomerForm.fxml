@@ -33,7 +33,7 @@
       <JFXComboBox fx:id="cmbTitle" layoutX="156.0" layoutY="163.0" prefHeight="25.0" prefWidth="247.0" promptText="Title" />
       <JFXTextField fx:id="txtContact" layoutX="156.0" layoutY="309.0" prefHeight="25.0" prefWidth="247.0" promptText="Contact Number" />
       <JFXButton layoutX="304.0" layoutY="415.0" onAction="#btnClearAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #e74c3c;" text="Clear" textFill="WHITE" />
-      <JFXButton layoutX="388.0" layoutY="415.0" onAction="#btnExitAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #2c3e50;" text="Exit" textFill="WHITE" />
+      <JFXButton fx:id="btnExit" layoutX="388.0" layoutY="415.0" onAction="#btnExitAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #2c3e50;" text="Exit" textFill="WHITE" />
       <DatePicker fx:id="dob" layoutX="154.0" layoutY="350.0" prefHeight="25.0" prefWidth="247.0" />
    </children>
 </AnchorPane>

@@ -3,8 +3,6 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import db.DBConnection;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -13,7 +11,7 @@ import model.Customer;
 
 import java.util.List;
 
-public class SearchCustomerFormController {
+public class DeleteCustomerFormController {
 
     @FXML
     private JFXTextField searchField;
@@ -37,21 +35,9 @@ public class SearchCustomerFormController {
     private JFXButton btnExit;
 
     @FXML
-    void btnClearOnAction(ActionEvent event) {
-        searchField.setText("Search Phone Number");
-        idLbl.setText("ID : ");
-        nameLbl.setText("Name : ");
-        addressLbl.setText("Address : ");
-        numberLbl.setText("Number : ");
-        dobLbl.setText("Birthday");
+    void btnSearchOnAction(ActionEvent event) {
+        searchCustomer();
     }
-
-    @FXML
-    void btnExitOnAction(ActionEvent event) {
-        Stage stage = (Stage) btnExit.getScene().getWindow();
-        stage.close();
-    }
-
     public void searchCustomer(){
         List<Customer> customerList = DBConnection.getInstance().getConnection();
 
@@ -67,8 +53,38 @@ public class SearchCustomerFormController {
             }
         }
     }
+
     @FXML
-    void btnSearchOnAction(ActionEvent event) {
-        searchCustomer();
+    void btnDeleteOnAction(ActionEvent event) {
+        List<Customer> customerList = DBConnection.getInstance().getConnection();
+
+        for (int i=0; i<customerList.size(); i++ ){
+            Customer cus = customerList.get(i);
+
+            if (searchField.getText().equals(cus.getNumber())){
+                customerList.remove(cus);
+            }
+        }
     }
+
+    @FXML
+    void btnClearOnAction(ActionEvent event) {
+        searchField.setText("Search Phone Number");
+        idLbl.setText("ID : ");
+        nameLbl.setText("Name : ");
+        addressLbl.setText("Address : ");
+        numberLbl.setText("Number : ");
+        dobLbl.setText("Birthday");
+    }
+
+    @FXML
+    void btnExitOnAction(ActionEvent event) {
+        Stage stage = (Stage) btnExit.getScene().getWindow();
+        stage.close();
+    }
+
+
+
+
+
 }

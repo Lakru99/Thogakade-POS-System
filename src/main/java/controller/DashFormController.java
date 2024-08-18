@@ -1,6 +1,7 @@
 package controller;
 
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.sun.javafx.application.PlatformImpl.exit;
+
+
 public class DashFormController {
+    private JFXButton btnExit;
 
     @FXML
     void btnAddCustomerAction(ActionEvent event) throws IOException {
@@ -24,7 +29,13 @@ public class DashFormController {
 
     @FXML
     void btnDeleteCustomerAction(ActionEvent event) {
-
+        Stage stage =new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/deleteCustomer.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
@@ -40,7 +51,13 @@ public class DashFormController {
 
     @FXML
     void btnUpdateCustomerAction(ActionEvent event) {
-
+        Stage stage =new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/UpdateCustomerForm.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
@@ -54,4 +71,8 @@ public class DashFormController {
         }
     }
 
+    @FXML
+    void btnExitCustomerAction(ActionEvent event) {
+        exit();
+    }
 }
